@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Bash from '../../components/Bash';
 import Table from '../../components/Table';
+import Footer from '../../components/Footer';
 
 interface PostData {
   id: string;
@@ -28,6 +29,7 @@ const Home: React.FC = () => {
     <div className='flex flex-col h-full text-white'>
       <Bash/>
       <Table posts={posts}/>
+      <Footer />
     </div>
   );
 };
