@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import {marked} from 'marked';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 interface RouteParams extends Record<string, string | undefined> {
