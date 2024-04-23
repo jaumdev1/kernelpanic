@@ -1,0 +1,31 @@
+#root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.93); 
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    max-height: max-content;
+    min-height: 100vh;
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+  .markdown-preview > div {
+    padding: 10px;
+  }
+  .no-reset * {
+    all: revert;
+    border-radius: border-box;
+    max-width: 100%;
+  }
