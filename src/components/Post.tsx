@@ -22,7 +22,7 @@ const formatDate = (dateString: string): string => {
 
 const Post: React.FC<PostProps> = ({ id, author, createdAt, title }) => {
   return (
-    <Link to={`/article/${id}`} style={{ textDecoration: 'none', color: 'inherit' }} className='font-roboto text-white'>
+    <Link to={`/article/${id}`} style={{ textDecoration: 'none', color: 'inherit' }} className='font-roboto'>
       <div className="post grid gap-4" style={{ gridTemplateColumns: 'auto auto auto 1fr', cursor: 'pointer' }} 
            onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'} 
            onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}>

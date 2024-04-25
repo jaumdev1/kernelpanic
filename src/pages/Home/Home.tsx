@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Bash from '../../components/Bash';
 import Table from '../../components/Table';
 import Footer from '../../components/Footer';
-
+const apiUrl = import.meta.env.VITE_API_URL;
+console.log(apiUrl);
 interface PostData {
   id: string;
   author: string;
@@ -14,7 +15,7 @@ const Home: React.FC = () => {
   const [posts, setPosts] = useState<PostData[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/posts')
+    fetch(`${apiUrl}/posts`)
       .then(response => response.json())
       .then(data => setPosts(data.map((post: any) => ({
         id: post.id,
@@ -26,7 +27,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className='flex flex-col h-full text-white'>
+    <div className='flex flex-col h-full'>
       <Bash/>
       <Table posts={posts}/>
       <Footer />
